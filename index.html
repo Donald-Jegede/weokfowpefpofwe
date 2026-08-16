@@ -3,34 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Bomb Tag 💣</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
     <div id="app">
 
+        <!-- TOP BAR -->
         <header class="topbar">
+
             <div>
                 <h1>💣 Bomb Tag</h1>
                 <p>Run. Tag. Survive.</p>
             </div>
 
-            <div id="connectionStatus" class="status disconnected">
+            <div
+                id="connectionStatus"
+                class="status disconnected"
+            >
                 Offline
             </div>
+
         </header>
 
-        <!-- MENU -->
-        <section id="menuScreen" class="screen">
-            <div class="card hero-card">
-                <div class="big-bomb">💣</div>
 
-                <h2>Bomb Tag</h2>
+        <!-- =========================
+             MENU
+        ========================== -->
+
+        <section
+            id="menuScreen"
+            class="screen"
+        >
+
+            <div class="card hero-card">
+
+                <div class="big-bomb">
+                    💣
+                </div>
+
+                <h2>
+                    Bomb Tag
+                </h2>
+
                 <p class="description">
                     Get rid of the bomb before it goes BOOM!
                 </p>
 
-                <label for="nameInput">Your Name</label>
+
+                <label for="nameInput">
+                    Your Name
+                </label>
+
                 <input
                     id="nameInput"
                     maxlength="16"
@@ -38,16 +66,30 @@
                     autocomplete="off"
                 >
 
-                <button id="createBtn" class="primary">
+
+                <button
+                    id="createBtn"
+                    class="primary"
+                >
                     Create Room
                 </button>
 
-                <button id="showJoinBtn">
+
+                <button
+                    id="showJoinBtn"
+                >
                     Join Room
                 </button>
 
-                <div id="joinArea" class="hidden">
-                    <label for="roomInput">Room Code</label>
+
+                <div
+                    id="joinArea"
+                    class="hidden"
+                >
+
+                    <label for="roomInput">
+                        Room Code
+                    </label>
 
                     <input
                         id="roomInput"
@@ -56,80 +98,189 @@
                         autocomplete="off"
                     >
 
-                    <button id="joinBtn" class="primary">
+                    <button
+                        id="joinBtn"
+                        class="primary"
+                    >
                         Join
                     </button>
+
                 </div>
 
-                <p id="menuMessage" class="message"></p>
+
+                <p
+                    id="menuMessage"
+                    class="message"
+                ></p>
+
             </div>
+
         </section>
 
-        <!-- LOBBY -->
-        <section id="lobbyScreen" class="screen hidden">
+
+        <!-- =========================
+             LOBBY
+        ========================== -->
+
+        <section
+            id="lobbyScreen"
+            class="screen hidden"
+        >
+
             <div class="card lobby-card">
 
+
                 <div class="room-top">
+
                     <div>
-                        <span class="room-label">ROOM CODE</span>
-                        <div id="roomCode" class="room-code">
+
+                        <span class="room-label">
+                            ROOM CODE
+                        </span>
+
+                        <div
+                            id="roomCode"
+                            class="room-code"
+                        >
                             ----
                         </div>
+
                     </div>
 
-                    <button id="copyBtn" class="small-button">
+
+                    <button
+                        id="copyBtn"
+                        class="small-button"
+                    >
                         Copy
                     </button>
+
                 </div>
+
 
                 <div class="share-box">
-                    <input id="shareLink" readonly>
-                    <button id="copyLinkBtn">
+
+                    <input
+                        id="shareLink"
+                        readonly
+                    >
+
+                    <button
+                        id="copyLinkBtn"
+                    >
                         Copy Link
                     </button>
+
                 </div>
 
-                <h2>Waiting for your friend...</h2>
 
-                <div id="players" class="players">
-                    <!-- Players inserted here -->
+                <h2>
+                    Waiting for your friend...
+                </h2>
+
+
+                <div
+                    id="players"
+                    class="players"
+                >
+
+                    <!-- Players will appear here -->
+
                 </div>
 
-                <p id="lobbyMessage" class="message">
+
+                <p
+                    id="lobbyMessage"
+                    class="message"
+                >
                     Send the room code to your friend.
                 </p>
 
-                <button id="startBtn" class="primary wide" disabled>
+
+                <button
+                    id="startBtn"
+                    class="primary wide"
+                    disabled
+                >
                     Start Game
                 </button>
 
-                <button id="leaveLobbyBtn" class="ghost wide">
+
+                <button
+                    id="leaveLobbyBtn"
+                    class="ghost wide"
+                >
                     Leave Room
                 </button>
+
             </div>
+
         </section>
 
-        <!-- GAME -->
-        <section id="gameScreen" class="screen hidden">
+
+        <!-- =========================
+             GAME
+        ========================== -->
+
+        <section
+            id="gameScreen"
+            class="hidden"
+        >
+
 
             <div class="game-topbar">
 
-                <div class="game-stat">
-                    <span>ROOM</span>
-                    <strong id="hudRoom">----</strong>
-                </div>
-
-                <div class="game-stat center">
-                    <span id="roundText">ROUND 1</span>
-                    <strong id="timerText">15.0</strong>
-                </div>
 
                 <div class="game-stat">
-                    <span>SCORE</span>
-                    <strong id="scoreText">0 - 0</strong>
+
+                    <span>
+                        ROOM
+                    </span>
+
+                    <strong
+                        id="hudRoom"
+                    >
+                        ----
+                    </strong>
+
+                </div>
+
+
+                <div
+                    class="game-stat center"
+                >
+
+                    <span
+                        id="roundText"
+                    >
+                        ROUND 1
+                    </span>
+
+                    <strong
+                        id="timerText"
+                    >
+                        15.0
+                    </strong>
+
+                </div>
+
+
+                <div class="game-stat">
+
+                    <span>
+                        SCORE
+                    </span>
+
+                    <strong
+                        id="scoreText"
+                    >
+                        0 - 0
+                    </strong>
+
                 </div>
 
             </div>
+
 
             <div id="gameWrap">
 
@@ -139,54 +290,104 @@
                     height="560"
                 ></canvas>
 
+
                 <!-- COUNTDOWN -->
-                <div id="countdown" class="overlay hidden">
-                    <div id="countdownNumber">
+
+                <div
+                    id="countdown"
+                    class="overlay hidden"
+                >
+
+                    <div
+                        id="countdownNumber"
+                    >
                         3
                     </div>
+
                 </div>
 
+
                 <!-- ROUND RESULT -->
-                <div id="roundResult" class="overlay hidden">
+
+                <div
+                    id="roundResult"
+                    class="overlay hidden"
+                >
+
                     <div class="result-card">
 
-                        <div id="resultEmoji" class="result-emoji">
+                        <div
+                            id="resultEmoji"
+                            class="result-emoji"
+                        >
                             💥
                         </div>
 
-                        <h2 id="resultTitle">
+
+                        <h2
+                            id="resultTitle"
+                        >
                             BOOM!
                         </h2>
 
-                        <p id="resultDescription"></p>
 
-                        <button id="nextRoundBtn" class="primary">
+                        <p
+                            id="resultDescription"
+                        ></p>
+
+
+                        <button
+                            id="nextRoundBtn"
+                            class="primary"
+                        >
                             Next Round
                         </button>
 
                     </div>
+
                 </div>
 
             </div>
 
+
+            <!-- CONTROLS -->
+
             <div class="game-info">
 
+
                 <div>
-                    <strong>MOVE</strong>
-                    <span>WASD / Arrow Keys</span>
+
+                    <strong>
+                        MOVE
+                    </strong>
+
+                    <span>
+                        WASD / Arrow Keys
+                    </span>
+
                 </div>
 
-                <div id="bombStatus">
+
+                <div
+                    id="bombStatus"
+                >
                     💣 No bomb
                 </div>
 
             </div>
 
-            <button id="leaveGameBtn" class="ghost wide">
+
+            <button
+                id="leaveGameBtn"
+                class="ghost wide"
+            >
                 Leave Game
             </button>
 
         </section>
+
+
+        <!-- FOOTER -->
 
         <footer>
             Bomb Tag • 2 Player Multiplayer
@@ -194,9 +395,19 @@
 
     </div>
 
-    <!-- PeerJS -->
-    <script src="https://unpkg.com/peerjs@1.5.5/dist/peerjs.min.js"></script>
+
+    <!-- =====================================
+         PEERJS MULTIPLAYER LIBRARY
+    ====================================== -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/peerjs@1.5.5/dist/peerjs.min.js"
+    ></script>
+
+
+    <!-- YOUR GAME -->
 
     <script src="script.js"></script>
+
 </body>
 </html>
